@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  myflix-ui:
+    build: ./myflix-ui
+    container_name:  api_c
+    ports:
+    - '3000:3000'
+    stdin_open: true
+    tty: true
+  myflix-api:
+    build: ./myflix-api
+    container_name:  ui_c
+    ports:
+    - '5000:5000'
+  
+
+
+
