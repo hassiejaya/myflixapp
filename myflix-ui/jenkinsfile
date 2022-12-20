@@ -2,7 +2,7 @@ node {
     def app
 
     stage('Clone repository') {
-        url: 'https://github.com/hassiejaya/myflixapp.git'
+        git branch: 'master/myflix-ui', url: 'https://github.com/hassiejaya/myflixapp.git'
 
         checkout scm
     }
