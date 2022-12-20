@@ -1,12 +1,6 @@
 node {
     def app
 
-    stage('Clone repository') {
-        git branch: 'master/myflix-ui', url: 'https://github.com/hassiejaya/myflixapp.git'
-
-        checkout scm
-    }
-
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
