@@ -30,9 +30,14 @@ pipeline{
                 sh 'echo $DOCKERHUB-CREDENTIALS-PW | docker login -u $DOCKERHUB-CREDENTIALS-USR --password-stdin'
             }
         }
-        stage('Push'){
+         stage('Push-ui'){
             steps{
-                sh 'docker push assignmentlk/myflix'
+                sh 'docker push myflix-ui-img'
+            }
+        }
+        stage('Push-api'){
+            steps{
+                sh 'docker push myflix-api-img'
             }
         }
     }
