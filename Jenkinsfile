@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                dir('/var/jenkins_home/workspace/myflixpipe/myflix-ui'){
+                dir('/myflix-ui'){
                     script{
                         dockerImage = docker.build("myflix-ui-img")
                     }
