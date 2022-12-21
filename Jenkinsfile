@@ -11,20 +11,20 @@ pipeline{
 	    stage('gitclone') {
 
 			steps {
-				git 'https://github.com/hassiejaya/myflix-ui.git'
+				git 'https://github.com/hassiejaya/myflixapp.git'
 			}
 		}
 
 		stage('Build-ui') {
 
 			steps {
-				bat 'docker build -t assignmentlk/myflix:latest ./myflix-ui'
+				bat 'docker build -t assignmentlk/myflix-ui:latest ./myflix-ui'
 			}
 		}
-        stage('Build-api') {
+       		 stage('Build-api') {
 
 			steps {
-				bat 'docker build -t assignmentlk/myflix:latest ./myflix-api'
+				bat 'docker build -t assignmentlk/myflix-api:latest ./myflix-api'
 			}
 		}
 
